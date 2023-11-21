@@ -1,0 +1,201 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : SET_SECURESTRING_IOS
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x124300c3087830ac
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : OBJC__Init
+     procedure_id : 1315896353783099564
+     type_code : 15
+     group : 5
+     code : |1-
+      #import <Security/Security.h>
+      #import <Foundation/Foundation.h>
+      
+      ////////////////////////
+      void OBJC__Init() {}
+      ////////////////////////
+      
+      
+      BOOL OBJC__createKey( NSData *tag, NSError **error ) 
+      {
+      	NSMutableString *label = [[NSMutableString alloc] initWithString:[[NSString alloc] initWithData:tag encoding:NSUTF8StringEncoding]];
+      	
+      	NSMutableString *publicLabel = [label mutableCopy];
+      	[publicLabel appendString:@".public"];
+      	
+      	NSDictionary * keyInfo = @{	( id )kSecAttrType:                    	( id ) kSecAttrKeyTypeRSA,		
+      								( id )kSecAttrKeySizeInBits:           	@2048,							
+      								( id )kSecPrivateKeyAttrs:
+      								@{	( id )kSecAttrLabel:             	label,
+      									( id )kSecAttrIsPermanent:       	@YES,
+      									( id )kSecAttrApplicationTag:    	tag,
+      								},
+      	};	
+      	
+      	CFErrorRef createKeyError = nil;
+      	SecKeyRef privateKey = SecKeyCreateRandomKey( ( __bridge CFDictionaryRef )keyInfo, &createKeyError );
+      	
+      	if ( !privateKey )
+      	{
+      		NSError * createKeyErr = CFBridgingRelease( createKeyError );
+      		*error = createKeyErr;
+      		return NO;
+      	} 
+      	else 
+      	{
+      		return YES;
+      	}
+      }
+      
+      SecKeyRef OBJC__getKeyRef( NSData *tag, NSError **error )
+      {
+      	NSDictionary * query = @{	( id )kSecClass:                 ( id )kSecClassKey,
+      								( id )kSecAttrApplicationTag:    tag,				
+      								( id )kSecAttrKeyType:           ( id )kSecAttrKeyTypeRSA,
+      								( id )kSecAttrKeySizeInBits:     @2048,					
+      								( id )kSecAttrIsPermanent:       @YES,					
+      								( id )kSecMatchLimit:            ( id )kSecMatchLimitOne,
+      								( id )kSecReturnRef:             @YES,					
+      	};
+      	
+      	SecKeyRef privateKey = nil;
+      	OSStatus status = SecItemCopyMatching( ( __bridge CFDictionaryRef )query, ( CFTypeRef * )&privateKey );
+      	
+      	if ( status != errSecSuccess || privateKey == nil )
+      	{
+      		NSError * createError = nil;
+      		BOOL createSuccess = OBJC__createKey( tag, &createError );
+      		
+      		if ( !createSuccess )
+      		{
+      			*error = createError;
+      			return nil;
+      		} 
+      		else 
+      		{
+      			privateKey = OBJC__getKeyRef( tag, nil );
+      		}
+      	}
+      	
+      	return privateKey;
+      }
+     language : ObjC
+     type : 458752
+   -
+     name : OBJC__LoadDecryptedString
+     procedure_id : 1315896353783165100
+     type_code : 15
+     group : 5
+     code : |1-
+      NSString *OBJC__LoadDecryptedString( NSString* sAlias, NSData* bufData )
+      {
+      	NSString *decodedString = @"";
+      
+      	NSData* tag = [sAlias dataUsingEncoding:NSUTF8StringEncoding];
+      	
+      	NSError * createError = nil;
+      	SecKeyRef privateKey = OBJC__getKeyRef( tag, &createError );
+      	if ( !privateKey ) 
+      	{
+      		NSError *err = CFBridgingRelease( createError );
+      		NSLog( @"error = %@, %@", [err userInfo], [err localizedDescription] );
+      		return decodedString;
+      	}
+      		
+      	
+      	NSData* plainData = nil;
+      	CFErrorRef error = NULL;
+      	SecKeyAlgorithm algorithm = kSecKeyAlgorithmRSAEncryptionOAEPSHA512; 
+      	
+      	plainData =  ( __bridge NSData* )SecKeyCreateDecryptedData( privateKey, algorithm, ( __bridge CFDataRef )bufData, &error );
+      	if ( !plainData ) 
+      	{
+      		NSError *err = CFBridgingRelease( error );
+      		NSLog( @"error = %@, %@", [err userInfo], [err localizedDescription] );
+      		return decodedString;
+      	}
+      	
+      	decodedString = [[NSString alloc] initWithData:plainData encoding:NSUTF8StringEncoding];
+      	
+      	if ( privateKey ) { CFRelease( privateKey ); }
+      	
+      	return decodedString;
+      }
+     language : ObjC
+     type : 458752
+   -
+     name : OBJC__SaveEncryptedString
+     procedure_id : 1315896353783230636
+     type_code : 15
+     group : 5
+     code : |1-
+      NSData *OBJC__SaveEncryptedString( NSString* sAlias, NSString* sData )
+      {
+      	NSData* encodedData = nil;
+      
+      	NSData* tag = [sAlias dataUsingEncoding:NSUTF8StringEncoding];
+      	
+      	NSError * createError = nil;
+      	SecKeyRef privateKey = OBJC__getKeyRef( tag, &createError );
+          if ( !privateKey ) 
+          {
+      		NSError *err = CFBridgingRelease( createError );
+      		NSLog( @"error = %@, %@", [err userInfo], [err localizedDescription] );
+          	return encodedData;
+          }
+          
+      	SecKeyRef publicKey = SecKeyCopyPublicKey( privateKey );
+          if ( !publicKey ) 
+          {
+          	return encodedData;
+          }
+      	
+      	NSData* plainData = [sData dataUsingEncoding:NSUTF8StringEncoding];
+      	
+      	SecKeyAlgorithm algorithm = kSecKeyAlgorithmRSAEncryptionOAEPSHA512; 
+      	BOOL canEncrypt = SecKeyIsAlgorithmSupported( publicKey, kSecKeyOperationTypeEncrypt, algorithm );
+      	canEncrypt &= ( [plainData length] < ( SecKeyGetBlockSize( publicKey ) - 130 ) );
+      	if ( !canEncrypt ) 
+      	{
+      		return encodedData;
+      	}
+      	
+      	CFErrorRef error = NULL;
+      	encodedData =  ( __bridge NSData* )SecKeyCreateEncryptedData( publicKey, algorithm, ( __bridge CFDataRef )plainData, &error );
+      	if ( !encodedData ) 
+      	{
+      		NSError *err = CFBridgingRelease( error );
+      		NSLog( @"error = %@, %@", [err userInfo], [err localizedDescription] );
+      		return encodedData;
+      	}
+      	
+      	if ( publicKey )  { CFRelease( publicKey ); }
+      	if ( privateKey ) { CFRelease( privateKey ); }
+      		
+      	return encodedData;
+      }
+     language : ObjC
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x112763f300d5fccc
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

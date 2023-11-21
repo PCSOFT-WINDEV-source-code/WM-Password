@@ -1,0 +1,129 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : SET_SECURESTRING
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x124300c308692d61
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : LoadSecureString
+     procedure_id : 1315896353782115681
+     type_code : 15
+     code : |1-
+      // Summary: Loads a secure string previously secured by SaveSecureString
+      // Syntax:
+      //[ <Result> = ] LoadSecureString (<sAlias> is string [, <sDefaultValue> is string])
+      //
+      // Parameters:
+      //	sAlias (UNICODE string): Alias of the secure string to load
+      // 	sDefaultValue (UNICODE string - default value=""): Default value if the string does not exist
+      // Return value:
+      // 	UNICODE string: Stored secure string or empty string ("") if an error occurs
+      //
+      procedure LoadSecureString( local sAlias is string, sDefaultValue is string = "" ) : string
+      
+      	if InSimulatorMode() then
+      		ErrorThrow(1, "Function not available in simulator mode")
+      		return ""
+      	end
+      	
+      	// Secure key for decryption
+      	sAliasKey is string ANSI = BufferToHexa(HashString(HA_MD5_128, sAlias), NoGrouping, NoLine)
+      	
+      	// Loads the encrypted string
+      	sSecure is string ANSI = LoadParameter("Secure_" + sAlias, "")
+      	
+      	// The string is empty, return the default value
+      	if sSecure = "" then
+       		return sDefaultValue
+       	end
+      	
+      	<compile if TypeConfiguration=Android>
+      	
+      	// Decrypts the string
+      	sUnsecure is string = JAVA__LoadDecryptedString( sAliasKey, sSecure )
+      	
+      	<end>
+      	
+      	<compile if TypeConfiguration=ios>
+      
+      	// Decodes and decrypts the string	
+      	bufData is buffer = Decode(sSecure, encodeBASE64NoCR)
+      	sUnsecure is string = OBJC__LoadDecryptedString( sAliasKey, bufData )
+      	
+      	<end>
+      	
+      	return sUnsecure	
+     type : 458752
+   -
+     name : SaveSecureString
+     procedure_id : 1315896353782181217
+     type_code : 15
+     code : |1-
+      // Summary: Securely stores a string
+      // Syntax:
+      //[ <Result> = ] SaveSecureString (<sAlias> is string, <sString> is string)
+      //
+      // Parameters:
+      //	sAlias (UNICODE string): Alias of the string to be secured
+      //	sString (UNICODE string): String to be secured
+      // Return value:
+      // 	boolean: <specify the role of the return value>
+      //
+      procedure SaveSecureString( local sAlias is string, local sString is string ) : boolean
+      
+      	if InSimulatorMode() then
+      		ErrorThrow(1, "Function not available in simulator mode")
+      		return False
+      	end
+      	
+      	if sString = "" then
+       		ErrorThrow(2, "The string to be secured is empty")
+       		return False
+       	end	
+      	
+      	// Using the alias, creates a key that will be used as the name of the private/public key pair used to encrypt the string
+      	sAliasKey is string ANSI = BufferToHexa(HashString(HA_MD5_128, sAlias), NoGrouping, NoLine)
+      
+      	<compile if TypeConfiguration=Android>
+      
+      	// Encrypts the string
+      	sSecure is string ANSI = JAVA__SaveEncryptedString( sAliasKey, sString )
+      	
+      	<end>
+      	
+      	<compile if TypeConfiguration=ios>
+      	
+      	// Encrypts the string
+      	bufData is buffer = OBJC__SaveEncryptedString( sAliasKey, sString )
+      	
+      	// Encodes encrypted data
+      	sSecure is string ANSI = Encode(bufData, encodeBASE64NoCR)
+      	
+      	<end>
+      	
+      	// Storage
+      	SaveParameter("Secure_" + sAlias, sSecure)
+      	
+      return True
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x1127878500daee60
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

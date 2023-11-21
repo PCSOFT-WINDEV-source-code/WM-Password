@@ -1,0 +1,550 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : SET_Generator
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x124300c408893272
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  internal_properties : CAAAAAgAAAAO3vcg8YjWc8d+KSy8aXYdC7YytXYOdBOyI4Q3O+rhgIE8xRdZqRNv8gaqy4RoVYreJpkCRyKYRdNlkk4yC+u0Bo4IfWgihQ==
+  type_code : 31
+  p_codes :
+   -
+     code : |1-
+      constant
+      	// Triplets of characters found in a text in French (used to generate "pronounceable" passwords)
+      	DATABASE_TRIPLET = [
+      aba.abb.abe.abh.abi.abj.abl.abn.abo.abr.abs.abu.aby.aca.acc.ace.ach.aci.ack.acl.aco.acq.acr.acs.act.acu.acz.ada.add.ade.adh.adi.adj.adm.ado.adr.adu.adv.afa.afe.aff.afi.afo.afr.aga.age.agg.agi.agn.ago.agr.ags.agu.aha.ahc.ahi.ahl.aho.ahs.ahu.aib.aid.aie.aig.ail.aim.ain.air.ais.ait.aix.aja.aje.ajo.aju.ake.aki.akl.ako.ala.alb.alc.ald.ale.alf.alg.alh.ali.alk.all.alm.alo.alp.alq.als.alt.alu.alv.aly.alz.ama.amb.ame.ami.amm.amn.amo.amp.ams.amu.amy.ana.anc.and.ane.anf.ang.ani.anl.anm.ann.ano.anp.anq.ans.ant.anx.any.anz.aor.aos.apa.ape.aph.api.apl.apo.app.apr.aps.apt.apu.aqu.ara.arb.arc.ard.are.arf.arg.ari.ark.arl.arm.arn.aro.arp.arq.arr.ars.art.aru.arv.ary.asa.asc.ase.asi.ask.asm.aso.asp.asq.ass.ast.asu.ata.atc.ate.ath.ati.atl.atm.ato.atr.ats.att.atu.aub.auc.aud.auf.aug.auh.auj.auk.aul.aum.aun.aup.auq.aur.aus.aut.auv.aux.ava.ave.avi.avo.avr.avu.awa.awh.awi.awk.awn.axa.axt.aya.aye.ayi.ayk.ayl.ayn.ayo.ayr.ays.ayu.aza.aze.azo.azt.azu.bab.bac.bad.bag.bah.bai.bal.bam.ban.bar.bas.bat.bau.bav.bay.baz
+      .bba.bbe.bea.bec.bei.bel.bem.ben.ber.bes.bet.beu.bez.bho.bia.bib.bic.bid.bie.big.bij.bil.bin.bio.bir.bis.bit.biv.biz.bje.bju.bla.ble.bli.blo.blu.boc.boe.boh.boi.bol.bom.bon.bor.bos.bot.bou.bow.boy.boz.bra.bre.bri.bro.bru.bsc.bse.bsi.bso.bst.bsu.bte.bti.bua.bub.buc.bue.buf.bui.bul.bun.bur.bus.but.buv.byr.byt.cab.cac.cad.caf.cag.cai.caj.cal.cam.can.cap.car.cas.cat.cau.cav.cay.cca.ccc.cce.cci.ccl.cco.ccr.ccu.cea.ceb.cec.cei.cej.cel.cem.cen.cep.cer.ces.cet.ceu.cev.cez.cha.chc.che.chi.chk.cho.chp.chr.chs.cht.chu.cia.cib.cic.cid.cie.cif.cig.cih.cil.cim.cin.cio.cip.ciq.cir.cis.cit.ciu.civ.cke.cko.ckr.cla.cle.cli.clo.clu.clx.coa.cob.coc.coe.cog.coh.coi.col.com.con.coo.cop.coq.cor.cos.cot.cou.coy.cqu.cra.cre.cri.cro.cru.cta.cte.cti.cto.ctr.cts.ctu.cua.cub.cuc.cue.cuh.cui.cul.cum.cun.cup.cur.cus.cut.cuz.cyc.cyg.cze.dab.dac.dah.dai.dal.dam.dan.dap.dar.das.dat.dav.dcc.ddi.dea.deb.dec.ded.dee.deg.deh.del.dem.den.dep.der.des.det.deu.dev.dex.dez.dge.dia.dic.did.die.dif.dig.dil.dim.din.dio.dip.diq.di
+      r.dis.dit.div.dix.diz.dju.dme.dmi.dob.doc.dog.doi.dol.dom.don.dop.dor.dos.dot.dou.doy.dra.dre.dri.dro.dru.dry.dub.duc.due.dug.dui.dul.dum.dun.dup.duq.dur.dus.dut.duv.dve.dvi.dze.eai.eal.ean.ear.eas.eat.eau.eav.eba.ebe.ebi.ebl.ebo.ebr.ebu.eca.ece.ech.eci.eck.ecl.eco.ecr.ecs.ect.ecu.eda.ede.edi.edo.edr.eds.edz.eek.een.eer.ees.eet.efa.efe.eff.efi.efl.efo.efr.efs.efu.ega.egm.ego.egr.egu.egy.eha.ehd.ehe.ehn.eho.ehu.eig.eil.eim.ein.eir.eiz.eje.ejo.eka.eke.eki.ela.elc.ele.eli.ell.elo.elq.els.elu.ema.emb.eme.emi.emm.emo.emp.ems.emu.ena.enc.end.ene.enf.eng.enh.eni.enj.enl.enn.eno.enq.enr.ens.ent.enu.env.enw.enz.eoc.eoi.eol.eon.eot.epa.epe.eph.epi.epl.epo.epr.eps.ept.epu.equ.era.erb.erc.erd.ere.erf.erg.eri.erj.erl.erm.ern.ero.erp.erq.err.ers.ert.eru.erv.esa.esb.esc.ese.esi.esk.esn.eso.esp.esq.ess.est.esu.eta.etc.ete.eti.etl.eto.etr.ets.ett.etu.etz.eub.eud.eue.euf.eug.eui.eul.eum.eun.eup.eur.eus.eut.euv.eux.eva.eve.evi.evo.evr.evu.exa.exc.exe.exh.exi.exo.exp.exq.ext.eya.eye.ezc.ezi.ezq.fab.fac.f
+      ai.fal.fam.fan.far.fas.fat.fau.fav.fec.fei.fel.fem.fen.fer.fes.fet.feu.ffa.ffe.ffi.ffl.ffo.ffr.ffu.fia.fic.fid.fie.fig.fil.fin.fiq.fir.fis.fit.fix.fla.fle.fli.flo.flu.foi.fol.fon.for.fos.fou.foy.fra.fre.fri.fro.fru.fub.fue.fug.fui.ful.fum.fun.fur.fus.fut.fuy.gab.gac.gaf.gag.gai.gal.gam.gan.gar.gas.gat.gau.gay.gaz.gea.gel.gem.gen.geo.ger.ges.get.geu.gez.ggl.ggr.ghi.gia.gib.gid.gie.gig.gil.gin.gio.giq.gir.gis.git.giv.gla.gle.gli.glo.gly.gma.gme.gna.gne.gni.gno.gnu.gny.gob.goc.gog.goi.gol.gon.gor.gos.got.gou.goy.gra.gre.gri.gro.gru.gta.gte.gts.gua.gub.gue.gui.gul.gum.gur.gus.gut.gwa.gym.gyo.gza.hab.hac.had.haf.hag.hai.hal.ham.han.hao.hap.haq.har.has.hat.hau.hav.haw.hay.hch.hco.hde.hec.hef.heg.hei.hek.hel.hem.hen.hep.her.hes.het.heu.hev.hew.hez.hib.hic.hid.hie.hif.hig.hil.him.hin.hio.hip.hiq.hir.his.hit.hiu.hiv.hka.hlg.hme.hoc.hod.hog.hoi.hol.hom.hon.hop.hoq.hor.hos.hot.hou.hoz.hpa.hra.hri.hro.hsh.hsi.htl.htz.hua.huc.hue.hui.hul.hum.hun.hup.hur.hus.hut.hym.hyp.hys.hzo.iab.iac.iad.iaf.iag.
+      iai.ial.iam.ian.iar.ias.iat.iau.iaz.iba.ibe.ibi.ibl.ibo.ibr.ibu.ica.ice.ich.ici.ick.icl.ico.ict.icu.ida.ide.idg.idi.ido.ids.idu.ied.ieg.iei.iel.iem.ien.iep.ier.ies.iet.ieu.iez.ife.iff.ifi.ifl.ifo.ifs.iga.ige.igh.igi.igl.igm.ign.igo.igr.igt.igu.igw.igz.ihi.ihu.iii.ijo.ijt.ike.iko.ila.ilb.ile.ilh.ili.ilk.ill.ilm.ilo.ilq.ils.ima.imb.ime.imi.imm.imo.imp.ims.imu.ina.inc.ind.ine.inf.ing.inh.ini.inj.inn.ino.inq.inr.ins.int.inu.inv.inz.ioc.iod.iol.iom.ion.ior.ios.iot.iou.iow.ipa.ipe.ipi.ipl.ipo.ipp.ipr.ipt.ipu.iqu.ira.irc.ire.irg.iri.irl.irm.iro.irr.irs.iru.irv.isa.isc.ise.isf.isi.isk.isl.ism.iso.isp.isq.iss.ist.isu.ita.ite.ith.iti.itl.ito.itr.its.itt.itu.iua.iuh.ium.iur.iva.ive.ivi.ivo.ivr.ivu.ixa.ixe.ixi.iye.iza.ize.izo.izt.jac.jad.jag.jai.jal.jam.jan.jar.jas.jau.jav.jec.jed.jef.jer.jes.jet.jeu.jim.joh.joi.jol.jon.jor.jos.jou.joy.jti.jua.jud.jue.jug.jui.jul.jum.jur.jus.juv.kan.kar.kat.kaw.kea.keh.kek.kem.ken.kep.kes.key.kez.kil.kin.kiy.kle.kna.koc.kof.kon.kou.kry.kse.lab.lac.lad.laf.lag.lah
+      .lai.lak.lam.lan.lap.laq.lar.las.lat.lau.lav.law.lay.laz.lbu.lca.lch.lco.lcr.lcu.lda.lde.ldi.ldo.ldt.lea.leb.lec.lee.lef.leg.lei.lem.len.leo.lep.leq.ler.les.let.leu.lev.lex.ley.lez.lfa.lfo.lga.lgr.lgu.lhe.lho.lhu.lia.lib.lic.lid.lie.lif.lig.lij.lik.lil.lim.lin.lio.lip.liq.lir.lis.lit.liu.liv.lix.lke.lki.lko.lla.lle.lli.llo.lls.llu.lly.lma.lme.lmi.lnd.lob.loc.lod.lof.log.loi.lom.lon.lop.loq.lor.los.lot.lou.low.loy.lpa.lpe.lpi.lpt.lqu.lsa.lsh.lsi.lta.lte.lti.ltr.ltu.lua.lub.luc.lud.lue.lug.lui.lul.lum.lun.lup.lur.lus.lut.luv.lux.lva.lve.lvo.lyn.lyp.lys.lyt.lzi.lzo.mab.mac.mad.mag.mah.mai.maj.mal.mam.man.map.mar.mas.mat.mau.maw.max.may.maz.mba.mbe.mbi.mbl.mbo.mbr.mbu.mdc.mea.meb.mec.med.mei.mel.mem.men.mer.mes.met.meu.mex.mez.mia.mic.mid.mie.mif.mig.mih.mil.mim.min.miq.mir.mis.mit.mma.mme.mmi.mmo.mmu.mna.mne.mni.mno.mob.moc.mod.moe.moh.moi.mok.mol.mom.mon.moo.moq.mor.mos.mot.mou.moy.mpa.mpe.mph.mpi.mpl.mpo.mpr.mps.mpt.mpu.mso.mte.mua.muc.mud.mue.mug.mul.mun.mur.mus.mut.myo.myr.mys.nab.na
+      c.nad.nag.nah.nai.naj.nak.nal.nam.nan.nap.nar.nas.nat.nau.nav.nca.nce.nch.nci.nck.ncl.nco.ncr.ncs.nct.ncu.nda.nde.ndi.ndo.ndr.nds.ndu.nea.nec.ned.nee.nef.neg.neh.nei.nek.nel.nem.nen.ner.nes.net.neu.nex.ney.nez.nfa.nfe.nfi.nfl.nfo.nfr.nfu.nga.nge.ngi.ngl.ngo.ngr.ngs.ngt.ngu.nha.nhe.nhi.nho.nhu.nia.nib.nic.nid.nie.nif.nig.nih.nij.nil.nim.nin.nio.niq.nir.nis.nit.niv.nja.nje.njo.nju.nkn.nla.nle.nlo.nlu.nmo.nna.nne.nni.nno.nnu.nob.noc.noe.nof.noi.nok.nol.nom.non.nop.noq.nor.nos.not.nou.nov.noy.noz.npi.nqu.nra.nre.nri.nro.nry.nsa.nsc.nse.nsf.nsg.nsi.nsm.nso.nsp.nss.nst.nsu.nta.nte.nth.nti.ntl.nto.ntr.nts.ntu.ntz.nua.nue.nui.nul.num.nun.nuo.nup.nur.nus.nut.nva.nve.nvi.nvo.nvu.nwo.nxi.nym.nza.nze.nzi.nzo.oah.oak.oal.oas.oat.oba.obe.obi.obj.obl.obo.obr.obs.obt.obu.oca.occ.oce.och.oci.ock.ocl.oco.ocr.ocs.oct.ocu.oda.ode.odi.odo.odu.oei.oel.oeu.ofa.ofe.off.ofi.ofo.ofu.oga.oge.ogi.ogl.ogm.ogn.ogr.ogu.oha.ohe.ohn.ohu.oic.oid.oie.oif.oig.oil.oin.oiq.oir.ois.oit.oiv.oix.oje.oke.okk.oks.ola.olc.old.o
+      le.oli.olk.oll.olo.ols.olt.olu.olv.oly.oma.omb.ome.omi.omm.omn.omo.omp.oms.omt.ona.onc.ond.one.onf.ong.onh.oni.onj.onl.onn.ono.onq.onr.ons.ont.onu.onv.ony.onz.ooa.oon.oop.oos.opa.ope.oph.opi.opl.opo.opp.opr.opt.opu.oqu.ora.orb.orc.ord.ore.orf.org.ori.orj.orl.orm.orn.oro.orp.orr.ors.ort.oru.orz.osa.osc.ose.osi.oso.osp.osq.oss.ost.ota.ote.oth.oti.otk.otl.oto.otr.ots.ott.otz.oua.oub.ouc.oud.oue.ouf.oug.ouh.oui.ouj.oul.oum.oun.ouo.oup.ouq.our.ous.out.ouv.oux.ouz.ova.ove.ovi.ovo.owa.oxi.oxy.oya.oye.oyi.oyo.oza.ozo.paa.pab.pac.pad.pag.pai.paj.pal.pam.pan.pap.paq.par.pas.pat.pau.pav.paw.pay.paz.pea.pec.peh.pei.pek.pel.pem.pen.peo.pep.per.pes.pet.peu.pez.pha.phe.phi.pho.phr.phy.pia.pic.pid.pie.pig.pih.pik.pil.pim.pin.pio.pip.piq.pir.pis.pit.piu.piv.piz.pla.ple.pli.plo.plu.pob.poc.pog.poi.pol.pom.pon.pop.poq.por.pos.pot.pou.poz.ppa.ppe.ppi.ppl.ppo.ppr.ppu.pra.pre.pri.pro.pru.psi.pta.pte.pti.pto.ptr.pts.ptu.pub.pud.pue.pug.pui.pul.pun.pup.pur.pus.put.puy.pyg.qua.que.qui.quo.quy.rab.rac.rad.raf.
+      rag.rah.rai.raj.rak.ral.ram.ran.rao.rap.raq.rar.ras.rat.rau.rav.ray.raz.rba.rbe.rbi.rbl.rbo.rbr.rbu.rca.rce.rch.rci.rcl.rco.rcs.rcu.rda.rde.rdi.rdo.rdr.rds.rdu.rea.reb.rec.red.ree.ref.reg.reh.rei.rej.rel.rem.ren.rep.req.rer.res.ret.reu.rev.rex.rey.rez.rfa.rfe.rfi.rfo.rfr.rfs.rfu.rga.rge.rgi.rgn.rgo.rgu.rhe.rhi.rhu.ria.rib.ric.rid.rie.rif.rig.ril.rim.rin.rio.rip.riq.rir.ris.rit.riv.rix.riz.rja.rje.rka.rla.rle.rlo.rma.rme.rmi.rmo.rmu.rna.rne.rni.rno.rnu.rob.roc.rod.rof.rog.roi.roj.rol.rom.ron.rop.roq.ror.ros.rot.rou.rov.rox.roy.rpa.rpe.rph.rpi.rpl.rpo.rpr.rps.rqu.rra.rre.rrh.rri.rro.rru.rry.rsa.rse.rsh.rsi.rso.rsp.rsq.rst.rsu.rta.rte.rth.rti.rto.rtr.rts.rtu.rty.rtz.rua.rub.ruc.rud.rue.rug.ruh.rui.rul.rum.run.rup.rur.rus.rut.ruv.ruy.ruz.rva.rve.rvi.rvo.rvu.ryt.rze.sab.sac.sad.sag.sai.saj.sal.sam.san.sap.sar.sas.sat.sau.sav.say.sbu.sby.sca.sce.sci.scl.sco.scr.scu.sea.sec.sei.sel.sem.sen.seo.sep.ser.ses.set.seu.sev.sex.sey.sez.sfa.sfo.sfu.sgr.sha.she.sho.shu.sia.sib.sid.sie.sif.sig.sil.sim
+      .sin.sio.sip.siq.sir.sis.sit.siv.six.ska.ske.sky.sla.slo.sme.smi.sna.sob.soc.soe.sog.soi.sol.som.son.sop.sor.sos.sot.sou.soy.spa.spe.sph.spi.spl.spo.spr.spu.squ.ssa.sse.ssi.sso.ssu.sta.ste.sth.sti.sto.str.stu.sua.sub.suc.sud.sue.suf.sug.sui.suj.sul.sum.sun.sup.sur.sus.sut.suy.swe.syl.sym.syn.sys.tab.tac.tad.taf.tag.tah.tai.tal.tam.tan.tao.tap.taq.tar.tas.tat.tau.tav.taw.taz.tch.tea.tec.tef.teg.teh.tei.tel.tem.ten.teo.tep.ter.tes.tet.teu.tev.tex.tey.tez.tha.the.thi.thl.thm.tho.thr.ths.thu.tia.tib.tic.tid.tie.tif.tig.til.tim.tin.tio.tip.tiq.tir.tis.tit.tiu.tiv.tka.tla.tle.tli.tlo.tmo.tob.toc.tod.tof.toh.toi.tol.tom.ton.top.toq.tor.tos.tot.tou.toy.tra.tre.tri.tro.tru.tta.tte.tti.ttl.tto.ttr.ttu.tty.tua.tub.tuc.tud.tue.tui.tul.tum.tun.tuo.tup.tur.tus.tut.tuv.tuy.typ.tyr.tys.tza.tzi.tzo.uab.uac.uad.uag.uai.ual.uan.uar.uas.uat.uau.uav.uaw.uay.uba.ube.ubi.ubj.ubl.ubo.ubr.ubs.ubt.ubu.uca.ucc.uce.uch.uci.ucl.uco.uct.ucu.uda.ude.udi.udo.udr.uds.ueb.uec.ued.uef.uei.uel.uem.uen.uep.uer.ues.uet.ue
+      u.uey.uez.ufe.uff.ufi.ufl.ufr.ufs.uga.uge.ugg.ugh.ugi.ugl.ugm.ugn.ugo.ugr.ugu.uha.uhc.uhp.uht.uhz.uic.uid.uie.uif.uil.uin.uip.uir.uis.uit.uiv.uje.ujo.uka.uks.ula.ulb.ulc.ule.ulg.uli.ull.ulm.uln.ulo.ulp.ulq.uls.ult.ulu.ulv.ulx.ulz.uma.umb.ume.umi.umo.ump.ums.umu.una.unc.une.uni.unk.uno.uns.unt.uoi.uol.uon.uos.uot.upa.upe.upi.upl.upo.upp.upr.ups.upt.upu.uqu.ura.urb.urc.urd.ure.urf.urg.urh.uri.url.urm.urn.uro.urp.urq.urr.urs.urt.uru.urv.usa.usc.use.ush.usi.uso.usp.usq.uss.ust.usu.uta.ute.uth.uti.uto.utr.uts.utt.utu.uva.uve.uvi.uvo.uvr.uxe.uxi.uxq.uxu.uya.uye.uyo.uza.uze.uzo.vab.vac.vad.vag.vah.vai.vaj.val.vam.van.vap.vaq.var.vas.vat.vau.vea.vec.ved.veg.vei.vel.vem.ven.ver.ves.vet.veu.vex.vez.via.vib.vic.vid.vie.vif.vig.vii.vil.vin.vio.vip.vir.vis.vit.viv.voc.voe.vog.voi.vol.vom.von.voq.vor.vos.vot.vou.voy.vra.vre.vri.vro.vue.vul.vur.vus.wac.wag.wal.wam.war.was.wat.wee.wes.wet.wha.whi.wig.wil.wis.wks.wne.wni.won.wor.wou.xac.xai.xal.xam.xan.xas.xat.xau.xav.xay.xce.xci.xcl.xcu.xem.xer.xes.x
+      ha.xib.xic.xie.xig.xii.xil.xim.xio.xiq.xis.xit.xiv.xix.xor.xot.xpa.xpe.xpi.xpl.xpo.xpr.xqu.xta.xte.xtl.xtr.xue.xur.xvi.xxi.xxv.xxx.xys.yab.yac.yag.yai.yak.yal.yam.yan.yar.yas.yau.yav.ycl.yeg.yek.yem.yen.yer.yes.yeu.yez.ygm.ygn.yie.yki.yli.yll.ymb.yme.ymn.ymp.ync.ynt.yol.yon.yor.yos.yot.you.ype.yph.ypo.yra.yre.yri.ysa.ysb.yse.ysi.ysm.yst.yte.yth.yti.yum.yun.yup.zad.zag.zai.zal.zap.zar.zas.zat.zau.zcu.zeh.zel.zie.zig.zil.zin.zom.zon.zos.zot.zou.zqu.zta.ztl.zur
+      ]
+      	// Symbols used in the generated passwords
+      	DATABASE_SYMBOLS = "&#{([-|_\@)]+=}$£%*µ!/:;.,?<>"
+      end
+      
+      private
+      garrSymbols is array of strings		// Array of symbols
+      gnNbSymbols is int						// Number of symbols
+      
+      garrTriplet is array of strings			// Array of triplets
+      gnNbTriplet is int						// Number of triplets
+      
+      // Initialize the arrays of triplets and the arrays of symbols
+      _InitializeArrays()
+     type : 720896
+  procedures :
+   -
+     name : _InitializeArrays
+     procedure_id : 1315896358079181426
+     type_code : 15
+     code : |1+
+      // Summary: Builds the arrays that will be used to generate the passwords
+      // Syntax:
+      //_InitializeArrays ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	None
+      //
+      procedure private _InitializeArrays()
+      
+      StringToArray(DATABASE_TRIPLET,garrTriplet,".")
+      gnNbTriplet = garrTriplet.Count
+      
+      for n=1 _to_ Length(DATABASE_SYMBOLS)
+      	Add(garrSymbols,DATABASE_SYMBOLS[[n]])
+      end
+      gnNbSymbols = garrSymbols.Count
+     type : 458752
+   -
+     name : AutoPass_Extreme
+     internal_properties : CAAAAAgAAAA2V0qKMnDt/DkLh3oy/49g29yD/zT/Z/2aQJFP40iuAIq2jkxkbmJhRkeoH/B/Casl4mL+7BJ9MPxdnLjQgoTog75rmbbYWvq1AuKfM1iZfzYUDuW6fDssm3b2J0BUKFH1SAp5hatndBW2HHC7pB++XY/q+i/FmBuB/I69kjWfqm/lYD1hg7a/+j26e9pNuC7A3RjAQMmxhSUmV1wjP5G7l1K7TA==
+     procedure_id : 1315896358079246962
+     type_code : 15
+     code : |1+
+      // Summary: Generate a password according to the "Extreme" algorithm
+      // Syntax:
+      //[ <Result> = ] AutoPass_Extreme ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: Password
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure AutoPass_Extreme() : string
+      
+      sPWD is string
+      bufUserHash is buffer = _CalculateDatabaseHash()
+      nPtrStart is int = 1
+      
+      bUpd is boolean
+      bHmin is boolean
+      bDigit is boolean
+      bSymbol is boolean
+      
+      for n=0 _to_ 6
+      	// Reads the 4 next characters in the buffer, convert them into integer and brings the value back in the bounds of the array of triplets
+      	nElem is int = (_BufferToInteger(bufUserHash,nPtrStart,4) modulo gnNbTriplet)+1
+      	nPtrStart += 4
+      	
+      	// Reads a byte in the buffer, its value will define whether the triplet elements will be used in uppercase, lowercase, digit, symbols or spaces
+      	nCase is int = _BufferToInteger(bufUserHash,nPtrStart,1)
+      	nPtrStart++
+      	sFragment is string = garrTriplet[nElem]	
+      	
+      	// The two first bits define the type of the first added character (0: uppercase, 1-2: lowercase, 3: digit)
+      	nFirst is int = bitRightShift(BinaryAND(nCase,0xc0),6)		// 0b11000000
+      	// Si au cinquième tour, on n'a toujours pas de majuscule, force la majuscule
+      	if n=5 _and_ bUpd=False then nFirst = 0
+      	switch nFirst
+      		case 0
+      			sPWD += Upper(sFragment[[1]])
+      			bUpd = True
+      		case 1,2
+      			sPWD += Lower(sFragment[[1]])
+      			bHmin = True
+      		case 3
+      			sPWD += Asc(Lower(sFragment[[1]])) modulo 10
+      			bDigit = True
+      	end
+      	
+      	// The next three bits define the type of the second added character
+      	nSecond is int = bitRightShift(BinaryAND(nCase,0x38),3)		// 0b00111000
+      	// If there is no lowercase at the third turn, forces the lowercase
+      	if n=3 _and_ bHmin=False then nFirst = 2
+      	// If there is no digit at the fourth turn, forces the digit
+      	if n=4 _and_ bDigit=False then nFirst = 4
+      	switch nSecond
+      		case 0,1
+      			sPWD += Upper(sFragment[[2]])
+      			bUpd = True
+      		case 2,3
+      			sPWD += Lower(sFragment[[2]])
+      			bHmin = True
+      		case 4,5
+      			sPWD += Asc(Lower(sFragment[[2]])) modulo 10
+      			bDigit = True
+      		case 6,7
+      			sPWD += garrSymbols[(Asc(Lower(sFragment[[2]])) modulo gnNbSymbols)+1]
+      			bSymbol = True
+      	end
+      	
+      	// The last three bits define the type of the thrid added character
+      	nThird is int = BinaryAND(nCase,0x07)	// 0b00000111
+      	// If there is no symbol at the second turn, forces the symbol
+      	if n=2 _and_ bSymbol=False then nFirst = 4
+      	switch nThird
+      		case 0,1
+      			sPWD += Upper(sFragment[[3]])
+      			bUpd = True
+      		case 2,3
+      			sPWD += Lower(sFragment[[3]])
+      			bHmin = True
+      		case 4,5
+      			sPWD += Asc(Lower(sFragment[[3]])) modulo 10
+      			bDigit = True
+      		case 6,7
+      			sPWD += garrSymbols[(Asc(Lower(sFragment[[3]])) modulo gnNbSymbols)+1]
+      			bSymbol = True
+      	end
+      end
+      
+      return Truncate(sPWD,20)
+     type : 458752
+   -
+     name : _CalculateDatabaseHash
+     internal_properties : CAAAAAgAAAD6lb9N0CiNOFwcraPayvVexaz9triKoz2y+PmXR2DqHJJGCmws1pZJ/idY5/x/DX+VQt7eTLLp4OR93KDciqCUO+4vsV7I3rpV4uJP5+jVs37c3KP8MuFaxUSkVUoafitXwogXP+GVKr+ESiYVQoUgP+lIgHG7lhmT8vRrdAs9xLHPZitruew1nJOgUVRLYzkkuWLq0ueOGpnOSIDnTxWB9Gx3AA==
+     procedure_id : 1315896358079312498
+     type_code : 15
+     code : |1+
+      // Summary: Calculates a hash based on the generation parameters, then this hash will be used to build the password
+      // Syntax:
+      //[ <Result> = ] _CalculateDatabaseHash ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	buffer: hash
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure private _CalculateDatabaseHash() : buffer
+      
+      return HashString(HA_SHA_512,GeneratePassword(64))
+     type : 458752
+   -
+     name : AutoPass_Long
+     procedure_id : 1315896358079378034
+     type_code : 15
+     code : |1+
+      // Summary: Generate a password according to the "Long" algorithm
+      // Syntax:
+      //[ <Result> = ] AutoPass_Long ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: Password
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure AutoPass_Long() : string
+      
+      return AutoPass_Std(18)
+     type : 458752
+   -
+     name : AutoPass_Average
+     procedure_id : 1315896358079443570
+     type_code : 15
+     code : |1+
+      // Summary: Generate a password according to the "Average" algorithm
+      // Syntax:
+      //[ <Result> = ] AutoPass_Average ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: Password
+      //
+      //	stInfo: Generation parameters
+      procedure AutoPass_Average() : string
+      
+      return AutoPass_Std(12)
+      
+     type : 458752
+   -
+     name : AutoPass_Std
+     internal_properties : CAAAAAgAAAB3FCMwQUq+c6gEsCo8dMRG1EH0hQqLOAWkFF9VF2Lcj2jvWFisjw+ROzTWP6rR6QeQrTaND2ikhcxIkcLxrDW4x7TBHRXAZiPlE0k8BuROYVdE+Gw0YZN16AdekZSoyocJnNKxfzHh9ktQLmBpXoVw7ScO2kljPLfdUOx/QGdd5Et68V9loKJ0/y9tJOB7oTUjTAnflzrSPm6ESIZNcWCcbORk++3j5MJEIuyo3D2RiVId2u0=
+     procedure_id : 1315896358079509106
+     type_code : 15
+     code : |1-
+      // Summary: Procedure common to the "Long" and "Average" algorithms
+      // Syntax:
+      //[ <Result> = ] AutoPass_Std (<nLength> is int)
+      //
+      // Parameters:
+      //	nLength (integer): Requested password length
+      // Return value:
+      // 	UNICODE string: Password
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure  AutoPass_Std( nLength is int ) : string
+      
+      sPWD is string
+      bufUserHash is buffer = _CalculateDatabaseHash()
+      nPtrStart is int = 1
+      
+      bDigit is boolean
+      
+      for n=0 _to_ (nLength/3)
+      	// Reads the 4 next characters in the buffer, convert them into integer and brings the value back in the bounds of the array of triplets
+      	nElem is int = (_BufferToInteger(bufUserHash,nPtrStart,4) modulo gnNbTriplet)+1
+      	nPtrStart += 4
+      	
+      	// Reads a byte in the buffer, its value will define whether the triplet elements will be used in uppercase, lowercase, digit, symbols or spaces
+      	nCase is int = _BufferToInteger(bufUserHash,nPtrStart,1)
+      	nPtrStart++
+      	sFragment is string = garrTriplet[nElem]
+      	
+      	// If nCase is even, add the Mmm pattern (upper, lower, lower), otherwise CCS (digit, digit, symbol)
+      	// if there is no CCS at the third turn, forces it
+      	bGenerateDigit is boolean = IsOdd(nCase) _and_ (bDigit=False)
+      	if n=2 _and_ bDigit=False then
+      		bGenerateDigit = True
+      	end
+      	
+      	if bGenerateDigit then
+      		sPWD += (Asc(Lower(sFragment[[1]])) modulo 10)+""+(Asc(Lower(sFragment[[2]])) modulo 10)+garrSymbols[(Asc(Lower(sFragment[[2]])) modulo gnNbSymbols)+1]
+      		bDigit = True
+      	else
+      		sPWD += Upper(sFragment[[1]])+Lower(sFragment[[2]])+Lower(sFragment[[3]])
+      	end
+      end
+      
+      return Truncate(sPWD,nLength)
+     type : 458752
+   -
+     name : AutoPass_Basic
+     internal_properties : CAAAAAgAAAB2F4pKclhtfKn71xqyf0/AO8xDj+QP903awLFfE1iekBo2PuwkzsJBlhc4n1AfaSul0qKOnAINQPydnMgg8lTYk777Gfa4utpF8pJfM5iZv9bERs2iJNNEMw6eX/hMIHkdIAJhrXM/TK3upIiz3PfmZWcConct8DP5lHaVSi2XkncdeMUJS46X8nUC0zKlEJao1VAoyHFJ3R0e/5Q719F71xL7jA==
+     procedure_id : 1315896358079574642
+     type_code : 15
+     code : |1-
+      // Summary: Generate a password according to the "Basic" algorithm
+      // Syntax:
+      //[ <Result> = ] AutoPass_Basic ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: Password
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure AutoPass_Basic() : string
+      
+      sPWD is string
+      bufUserHash is buffer = _CalculateDatabaseHash()
+      nPtrStart is int = 1
+      
+      for n=0 _to_ 3
+      	// Reads the 4 next characters in the buffer, convert them into integer and brings the value back in the bounds of the array of triplets
+      	nElem is int = (_BufferToInteger(bufUserHash,nPtrStart,4) modulo gnNbTriplet)+1
+      	nPtrStart += 4
+      	
+      	// Reads a byte in the buffer, its value will define whether the triplet elements will be used in uppercase, lowercase, digit, symbols or spaces
+      	nCase is int = _BufferToInteger(bufUserHash,nPtrStart,1)
+      	nPtrStart++
+      	sFragment is string = garrTriplet[nElem]	
+      	
+      	// The two first bits define the type of the first added character (0: uppercase, 1-2: lowercase, 3: digit)
+      	nFirst is int = bitRightShift(BinaryAND(nCase,0xc0),6)		// 0b11000000
+      	switch nFirst
+      		case 0
+      			sPWD += Upper(sFragment[[1]])
+      		case 1,2
+      			sPWD += Lower(sFragment[[1]])
+      		case 3
+      			sPWD += Asc(Lower(sFragment[[1]])) modulo 10
+      	end
+      	
+      	// The next three bits define the type of the second added character
+      	nSecond is int = bitRightShift(BinaryAND(nCase,0x38),3)		// 0b00111000
+      	switch nSecond
+      		case 0,1,2
+      			sPWD += Upper(sFragment[[2]])
+      		case 3,4,5
+      			sPWD += Lower(sFragment[[2]])
+      		case 6,7
+      			sPWD += Asc(Lower(sFragment[[2]])) modulo 10
+      	end
+      	
+      	// The last three bits define the type of the thrid added character
+      	nThird is int = BinaryAND(nCase,0x07)	// 0b00000111
+      	switch nThird
+      		case 0,1,2
+      			sPWD += Upper(sFragment[[3]])
+      		case 3,4,5
+      			sPWD += Lower(sFragment[[3]])
+      		case 6,7
+      			sPWD += Asc(Lower(sFragment[[3]])) modulo 10
+      	end
+      end
+      
+      return Truncate(sPWD,8)
+     type : 458752
+   -
+     name : AutoPass_Name
+     internal_properties : CAAAAAgAAABow7TPZR6Yeej4Z0n2ZLtOsUZWej7RJSYiVEzhOdIis7xR+5JJTAAhsvoGUF7IuR6ygm5jTlgNw1q21bbExnw5qRKYpJjw/4bQiNLfJxxjEDG+rrDAlRop95wXn7ovlzZWja7OZ0j0L3Omkdojw84zLAoA4f+go7iz4E8DmLiwXV23772+CWjVgygq2t+jhhzeB+WYiwA=
+     procedure_id : 1315896358079640178
+     type_code : 15
+     code : |1-
+      // Summary: Generate a password according to the "User name" algorithm
+      // Syntax:
+      //[ <Result> = ] AutoPass_Name ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: Password
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure AutoPass_Name() : string
+      
+      sPWD is string
+      bufUserHash is buffer = _CalculateDatabaseHash()
+      nPtrStart is int = 1
+      
+      for n=0 _to_ 3
+      	// Reads the 4 next characters in the buffer, convert them into integer and brings the value back in the bounds of the array of triplets
+      	nElem is int = (_BufferToInteger(bufUserHash,nPtrStart,4) modulo gnNbTriplet)+1
+      	nPtrStart += 4
+      	
+      	sPWD += garrTriplet[nElem]	
+      end
+      
+      return Truncate(sPWD,9)
+     type : 458752
+   -
+     name : AutoPass_Short
+     internal_properties : CAAAAAgAAACOKYDYQvauMWRka7HmKBNKrdKGYs6FiRaGaAhJgVaaH/BV23KpIPRx3paC6HakYVoWrm47xlR5E1aCWcakojRFJa7QDEAky/bU7B6pkY7dTkOYiBY6L/wb6YbxGRTRIQQg9xi8QVIe2S3gu4R1jfCRhuxi7+lC5QrNwgF16lLqYy+BOavYi5LvhSoc3HEdOGRm9t3aNV4=
+     procedure_id : 1315896358079705714
+     type_code : 15
+     code : |1-
+      // Summary: Generate a password according to the "Short" algorithm
+      // Syntax:
+      //[ <Result> = ] AutoPass_Short ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: Password
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure AutoPass_Short() : string
+      
+      sPWD is string
+      bufUserHash is buffer = _CalculateDatabaseHash()
+      nPtrStart is int = 1
+      
+      // Reads the 4 next characters in the buffer, convert them into integer and brings the value back in the bounds of the array of triplets
+      nElem is int = (_BufferToInteger(bufUserHash,nPtrStart,4) modulo gnNbTriplet)+1
+      nPtrStart += 4
+      sFragment is string = garrTriplet[nElem]	
+      sPWD += Upper(sFragment[[1]])+Lower(sFragment[[2]])+ Lower(sFragment[[3]])
+      
+      nElem = (_BufferToInteger(bufUserHash,nPtrStart,1) modulo gnNbTriplet)+1
+      sFragment = garrTriplet[nElem]	
+      sPWD += Asc(Lower(sFragment[[1]])) modulo 10
+      	
+      return sPWD
+     type : 458752
+   -
+     name : AutoPass_PIN
+     internal_properties : CAAAAAgAAACOKYDYQvauMWRka7HmKBNKrdKGYs6FiRaGaAhJgVaaH/BV23KpIPRx3paC6HakYVoWrm47xlR5E1aCWcakojRFJa7QDEAky/bU7B6pkY7dTkOYiBY6L/wb6YbxGRTRIQQg9xi8QVIe2S3gu4R1jfCRhuxi7+lC5QrNwgF16lLqYy+BOavYi5LvhSoc3HEdOGRm9t3aNV4=
+     procedure_id : 1315896358079771250
+     type_code : 15
+     code : |1-
+      // Summary: Generate a password according to the "PIN" algorithm
+      // Syntax:
+      //[ <Result> = ] AutoPass_PIN ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: Password (PIN)
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure AutoPass_PIN() : string
+      
+      sPWD is string
+      bufUserHash is buffer = _CalculateDatabaseHash()
+      nPtrStart is int = 1
+      
+      // Reads the 4 next characters in the buffer, convert them into integer and brings the value back in the bounds of the array of triplets
+      nElem is int = (_BufferToInteger(bufUserHash,nPtrStart,4) modulo gnNbTriplet)+1
+      nPtrStart += 4
+      sFragment is string = garrTriplet[nElem]	
+      sPWD += (Asc(Lower(sFragment[[1]])) modulo 10) + "" + (Asc(Lower(sFragment[[2]])) modulo 10) + "" + (Asc(Lower(sFragment[[3]])) modulo 10)
+      
+      nElem = (_BufferToInteger(bufUserHash,nPtrStart,1) modulo gnNbTriplet)+1
+      sFragment = garrTriplet[nElem]	
+      sPWD += Asc(Lower(sFragment[[1]])) modulo 10
+      	
+      return sPWD
+     type : 458752
+   -
+     name : AutoPass_Sentence
+     internal_properties : CAAAAAgAAACYN0Pk3t4TiuSdLRy9mXk67fIxQx8nE20CICm/tzDC5JImMqwspm7hliegNzT3/S8NSi4WdGr5MFT1XCjciqhs+y73QW5IFtJtwtrPv5CF87Y04J/wlk0+GdDoEVY2asfLhsxT02UR3vNAftKxHlFc4+1cHNUf8u13/vgXcBe5QAVDGve/ndhZ8D/EHbBnuucdWpkdG/6ahSViyxNMNpK8mIoV4g==
+     procedure_id : 1315896358079836786
+     type_code : 15
+     code : |1-
+      // Summary: Generate a password according to the "Sentence" algorithm
+      // Syntax:
+      //[ <Result> = ] AutoPass_Sentence ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: Password
+      //
+      //	stInfo (STLoginInfo): Generation parameters
+      procedure AutoPass_Sentence() : string
+      
+      sPWD is string
+      bufUserHash is buffer = _CalculateDatabaseHash()
+      nPtrStart is int = 1
+      nLgrCurrentWord is int
+      
+      for n=0 _to_ 6
+      	// Reads the 4 next characters in the buffer, convert them into integer and brings the value back in the bounds of the array of triplets
+      	nElem is int = (_BufferToInteger(bufUserHash,nPtrStart,4) modulo gnNbTriplet)+1
+      	nPtrStart += 4
+      	
+      	// Reads a byte in the buffer, its value will define whether the triplet elements will be used in uppercase, lowercase, digit, symbols or spaces
+      	nCase is int = _BufferToInteger(bufUserHash,nPtrStart,1)
+      	nPtrStart++
+      	sFragment is string = garrTriplet[nElem]	
+      	
+      	// The first character is always a letter
+      	sPWD += Lower(sFragment[[1]])
+      	nLgrCurrentWord++
+      	
+      	// The next three bits define the type of the second added character: 7 = space, other = letter
+      	nSecond is int = bitRightShift(BinaryAND(nCase,0x38),3)		// 0b00111000
+      	if nSecond=7 _and_ nLgrCurrentWord>=2 _and_ n<>6 then
+      		sPWD += " "
+      		nLgrCurrentWord = 0
+      	else
+      		sPWD += Lower(sFragment[[2]])
+      		nLgrCurrentWord++
+      	end
+      	
+      	// The last three bits define the type of the third added character: 7 = space, other = letter
+      	nThird is int = BinaryAND(nCase,0x07)	// 0b00000111
+      	if nThird=7 _and_ nLgrCurrentWord>=2 _and_ n<>6 then
+      		sPWD += " "
+      		nLgrCurrentWord = 0
+      	else
+      		sPWD += Lower(sFragment[[3]])
+      		nLgrCurrentWord++
+      	end
+      end
+      
+      return Truncate(sPWD,20)
+     type : 458752
+   -
+     name : _BufferToInteger
+     internal_properties : CAAAAAgAAAAUu9lnKvb3+n4O2yVgbKdYx7LvDA1j130awJFPY8guAIo2Dkzk7mJhRkcon/B/CSul4mJ+7BL9sHzdnLhQAgTogz7rmTZYWvq1AmIfM1iZ/7YUTiV6PPtsW7Y25wCU6JE1CEq5RWsntNX2XDB75N/+nU8qOu+FWFtBPM59UnVf6q+loH0hQ3b/un36O5qd9KuKP/BsXB2oLJ+sHsJ5rbs7DgaZbg==
+     procedure_id : 1315896358079902322
+     type_code : 15
+     code : |1+
+      // Summary: Re-writes the BufferToInteger function (not available for Android)
+      // Syntax:
+      //[ <Result> = ] _BufferToInteger (<buf> is buffer, <nOffset> is int [, <nSize> is int])
+      //
+      // Parameters:
+      //	buf (buffer): Buffer
+      //	nOffset (integer): Offset of the integer to extract
+      //	nSize (integer - default value=4): Size of integer to extract
+      // Return value:
+      // 	Undefined type: // 	Integer
+      //
+      procedure private _BufferToInteger( buf is buffer, nOffset is int, nSize is int = 4 )
+      
+      if not nSize in (1, 2, 4, 8) then
+      	ErrorThrow(1,"The integer to extract has an invalid size")
+      	return 0	
+      end
+      
+      // Calculate the value
+      nInteger is 8-byte int = 0
+      for i=1 _to_ nSize
+      	nInteger += Asc(buf[[nOffset+i-1]]) * Power(2,i-1)
+      end
+      
+      return nInteger
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x114a04dd09bac6f0
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

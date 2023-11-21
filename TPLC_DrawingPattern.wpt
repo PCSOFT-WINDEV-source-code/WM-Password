@@ -1,0 +1,269 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : TPLC_DrawingPattern
+ major_version : 28
+ minor_version : 0
+ type : 20
+ description : ""
+ subtype : 0
+window :
+ name : TPLC_DrawingPattern
+ identifier : 0x224300c650aa3bc8
+ internal_properties : CAAAAAgAAACx0G2eckaB7d5HXgz1NA3Dkdc43d9v3Yu2aNrQr2Lt6qexXfT44IcmVEuU2IH3FfCeQZmd3sEcIlTB1qCQQAbSbDZhm0iPQRl3EWCSIqnN0mjFKMU6yFwWbPh+U01J8Dd000lAkLeOWNC25F32p1ynHcXrkkgWvVJBk8QLniV5pLNpOMoo+TCu9M81eQIUZvCwRvMlNz++Qj07YIA6alDvrnt1rvH9vsKaldEYLx9/8w9MBJle/rLpHAjALZKJSYLS1NPJ//kq6vBrUeU1RgiyYbmGFyR37XlGVvA0wIyyX92jJRYHWQPZgPzGQfOFe9tWjNSuCk2vURhCPTRVRbRf52bIfViVvSjAx9TykkevJNk97OBBIw9A7J20+2BzaggG0+67CLRfvxWtRuVJaLjNuGtz3Wt8OpoGkVUx75fRa6ZiRc/QNl/PhuBDZ9hwdcn6udMwbm6BaAh8fOvg2ji6fg6xExpmRSZNMtYowqTwdo6Y544QwWFSnXg84cQx37hfl+dt5acDTfU2WZBBOY2o0Z19j9ywBVNkWw1Sj6k2SfpG/4AEUjtLi0OZmurBUPLrSGP8YXqbcpDW5QQNxqz/fMwnvOZSqINaOEOk21NU/UMuksnIB09WX8HJA0MsXZ6ulkpOuQ+QUZ5GxFE/zRLGfc6KbEEjLgtluybnMVLjBXHLklr8ZSQ3mZqrp8j/aGrWcd9jBmQMtukW5VgGkWT8XgYFWy5kay3uecPMRw8cQbl+VPdkmD0KQVG5a+buTX2+rZ7fpvBwyNy16sFTvC6W7m0IT/ufB+u5E0aBFX3LkeovEF/gWFBmieWbo+RWm4MdyU6CTrcYN1oqyhncWY6esw==
+ properties :
+  width : 150
+  height : 150
+ controls :
+  -
+    name : TPLC_DrawingPattern
+    identifier : 0x224300c650ab3bc8
+    internal_properties : CAAAAAgAAADqjcfHwcdSL2GmPvJb4BwqUtoq1oL5a3G3nIS6D60z+GVSUF1WvLsluydFVO/pg7U/ZdpYIW76XerMWuP0ntIAeEDMA/9jcCQT3T60h7hmN+sH/6KGQZ7HzlfTAX4PTmH11wm+aLb8lekbebWrqmCwM313NfZtFLHT2W8YKGvt4SoUXVtRvJ+7YtcgpcNEqzZHtW5Trc/vp6sl7KYFqYHnwCK89DyZ+flooZqIsOdY8fdLTutn51vh1XremRmp2yk8eI3MbsneVv5SnTLKq1i6xK0usx32ugdrdv5mHyl7eMvzjjK8B18+c37gXLY/OcJ7UkWmctaj/Tp+Cf5GolA/Y+YbZnNg1jttDRAKgIeIPNR/xEu7QNvq9UFwqJTRVFiNBaNZ/lPVulgQ2F9/P9cN7XA5G8LvEx9LUUUdrmd/QEGHn3AfnPQte84vbkYu2HeRUiYjKTMzYwrLEjF0c5Qm4DvbXieM4tGyg0s=
+    properties :
+     width : 150
+     height : 150
+    controls :
+     -
+       name : IMG_PROTECTION
+       identifier : 0x224300c650ac3bc8
+       internal_properties : CAAAAAgAAACETTVoqFiISGSARD1/2bdct9lDyTof+PU18pDg1CZRvHElFOkDRlxvMdxofqqqZE+2zvnFzEzb00mmCSk5gw+B/vyhb9irB1cDDY5v8I18GQSH1DbEr5mP41sckjAGZlPpAFa/UloY+zWLV2AtJBtzp2/Sg1XUPHyB6sEC2EBPx+yUYAoLkyVF8nTdjP5Q+yDECBD7SKruALcDMtn3hfR06ijXX7W1RYLFXFeyZyQ1EZy64DJXBj/3E1zZ+kuXOtNCVP7mEo+NtLOPJqEM53C+CPqFGLc9X6QZ+Dhb65y4m3LSLeT4D1DTyr3R0J6vq4K1HdQo2ZLGTH7HUUHNyQwyjtSTn2mls1OKglwFq9yT3g3k4z5CWuysgGxpgCeBdg+4nlvuzPvF6N/Zat6xrunlQKZld1y+AbxraXRT9Wv/NYxJYYT7tMEWNuFR0wRwuVECCpsTWDRfuHaqb23xBpPrLu/8wmRcvROEmxyYlsL2pBvXX6CKoHAJZf00TpoM1xi2ElwLNtfo6+TumsWyd24+rSJA0fcf9DPTkqxAAkX+7VvrHX0uoSmwG7qfT7wS9fu2bgg0TrpLdURB7AfXdRMILgyyyEjUagCRCyZb4UdE2VHwsLIwR3gCwHwoR+091V+WPMIB4kTr9vf/pVoAjDP81w1D7OKtnLasOK4I4gLdZml4JAVQ2O6nFe6gVomvMX2NTvqwQdNPkDLe96vAVJyp1bIB+BJB+G8ZyEFARaiw+AZD+tKuUx+PMJxNtKT7T5Cfm5GumbEQs8/2+Mb0oAdNI/lv/1sFVAs+5g==
+       properties :
+        width : 150
+        height : 150
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            if gnDrawingInProgress=1 then
+            	ProcessRollover()
+            end
+           type : 66048
+         -
+           code : |1+
+            if gnDrawingInProgress=0 then
+            	gnDrawingInProgress = 1
+            	ProcessRollover()
+            end
+            
+           type : 66049
+         -
+           code : |1+
+            
+            gnDrawingInProgress = 2
+            
+            // In verification, overload this process to check whether the pattern corresponds to the expected pattern
+           type : 66050
+     -
+       name : IMG_BASE
+       identifier : 0x224300c650ad3bc8
+       internal_properties : CAAAAAgAAAC0sJ3WDrdIfgei8kczDSut3pneViSCdUdq4Y6VLCMYJdsOFwDE6jIro6V3NwWtKvUmiVc6MnW8KaryI0a/9PSAW1+hLy/krHScUnAVZuH3c36WFhFxtgYFGVeLYVwh3xWfV5gJqh/JiKFYVUjTxtwk2ZDnS1uNyM+Pb0rfgPNn6bDOuz8rE7LymedphaoBQqlPkoe6Y3jfBQ7yN1qUOht88G+8YBS4gHrjXtjZw6UOBwkeAny8OGyM5fuVZaPLp+YjPYBfCcMi5RozYa/Byc5ecjL557ih7/7uPKQ3gtRjKFEGg9Rc85tKcZrSSAQ7UMGj/c576FWGjOLYtX4NcG5hzeOk2tG8FcWN+Hym6Jf7YdoD0JpllSSyubuS2DsaMmh27HP7vafEzNqieMl3iaRw3aOZ1RHQHACOGy1Lynk3NvuKXYsXHuuIpyZ3cwpENPS5FkJXc1DxlCjr7gd/lbHw+XcTnDPa18vQPOS/7RUkw2f1E0GdJXTepRniAQvFOYg4gdGZqB/8yJBS+woiQAKylOWYt3pCnH4CUDHzBNLXdVpbGAHGB7ehcwrqjwYWz2dj14AkRg5nYrQ9qQbcF7QF6LePOEwvw+nT/OeWng9qw2otPj07JWv0X3A5sXya2l9DlJFmeTc5BjTtphdeFfnXI1QGr1mKORpu1A0+SsfYS8IghMw9EvXYI93wvczEBmPiCaxEJT5cTx/h2kPvpEskeLweBYjCfGIwRSsR5R3UZtptbV495/lLCIiksux+SXMODxYhN/+QYqPRRClKl6RfzT+OjD6dEzR72sXi88J5Nx/HxI4+ZuLR/feOfco+UoCNUYn3cn2JSIbEIrLJvvbaBgpltmIgcaV9y2Br
+       properties :
+        x : 184
+        width : 50
+        height : 50
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes : []
+     -
+       name : IMG_ROLLOVER
+       identifier : 0x224300c650ae3bc8
+       internal_properties : CAAAAAgAAAB0PJilhWmHIg19wWNuxno/9sF2zBx8GN75Dk9L3dN4i/B7dwIDK6TwLnbwSLbssu76W/jyl0gQVNOLZ++Moter8pLO9D34q+RHAHLX632G2YeVXnDxX7gzq7Z8zmJFF/myn8LX4dlR4uPrdl9Ik8PaOimJsuNXI9dY7D68sCjeI+D/WvAZhH1/Sk+X1+6JgFTk1Nmw2SrpC8F+Ei6mntkRZcnjYA3rdMfyGOA0BQGx8My24cmbSuZLXkOUii31/co/8RwHP+7zaUqRd24ePPPJcHZKfNkAUU3CTSYB5NB8hQ4epcUx61xRTNeXh9DU5K2pEZQiHUSXQwSAFGvEC1p/GxbslfcxHi7KpnrCSxz74x6zL/R6Dw9fsSrEO5AtTIx4kEG1clX6EfL42dOGRg9iKvThhwr7d8NlZ7kt+F/mz/XW/o4npZLwGnjr/iGiFbTdjL8o4JbsTEs1hcfSxwzca07x1E9KW3zocbZI1m0fWsO8ADTU/NHMmONxJmRl5wk4GAtOeZxyGl9A5wP5bKK6WNsd71YNWBtFWB/we/F9qsnVyW7eTyUHo4JQcGfuC2GSDPiB/TMPLW7zms4IqkrdnjjNrgESDL2GZpTBx8jLkZ0njxnvzVkFysRbcNAZmiOfMK+95WhmR652oUznMmXC63kboLDpfCOtyVxlkAq3VXGGDF0A3ClELVbX4gMGemM+xfeHgwjlqGEVJ3LoIGF3zb1b+PRhNONQs8SPmlwzlDyMcypMg2ouZEOZHx6AhjPUdL7dAkaGDIrrWMeNvcZZ83cgYirBN1/joyOVNsw2IvVjy1Hx2m/l7zIuj4XGVyfO7MqB48n4aSgNz0x0RR7tno/32RllJx0YwA3rTw==
+       properties :
+        x : 244
+        width : 50
+        height : 50
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes : []
+    type : 42
+    code_elements :
+     type_code : 92
+     p_codes :
+      -
+        code : |1+
+         
+         garrDot is array of STRect
+         gnDrawingInProgress is int = 0	// 0 = not drawn yet, 1 = drawing in progress, 2 = drawing ended
+         gaaPattern is ASSOCIATIVE ARRAY of int
+         garrPatternOrder is array of int
+         
+         gnPointWidth is int
+         gnPointHeight is int
+      -
+        code : |1+
+         
+         InitializeControl()
+        type : 14
+ menu :
+  name : _Menu
+  identifier : 0x246a2b6a0271ae60
+  internal_properties : CAAAAAgAAAD6/fwZdBRB8IDYAHHmdn8xAxD+uXi41EZyxyOHKRRlDi2m/CEs9JtCuLNtpQR4bdAgFt15C/buXaxdGrwMrwwJuCoAJikYGopc1uMHSciY5Vph6EKTutrarwgYmlfNh1aVo8wMnkrPSeoSP72wKzwyxRnyuY2QRPOf6GYuWM5l6Ipw0pQnD39OpFcWAKOzfgtGoJixkv0AnpT1JQlY7hTDix6EZgtEQ8rOlTETgsUFxDI7MJeOlRLAFoXGjtTgiCQig5pkzhyLO6og7B3dCdLwCaouJtgl9qLZjPpvALzmdQLCOpZqXsPsrLga0fNO2Wo=
+  options : []
+ languages :
+  - en-GB
+ popup_menus : []
+ message_bar : {}
+ actionbar : {}
+ code_elements :
+  internal_properties : CAAAAAgAAAAbtNmSqtsOkx+QsZf2+WanOeFBVnc5uYmf5qmuvsRGWGuytMQn3hxD44bzPpedRjj3oPOr98XPV19NTS+YHw==
+  type_code : 91
+  p_codes : []
+  procedures :
+   -
+     name : InitializeControl
+     procedure_id : 1315896366676917192
+     type_code : 14
+     code : |1-
+      // Summary: Initialize the content and draw the initial matrix
+      // Syntaxe :
+      //InitializeControl ()
+      //
+      // Paramètres :
+      //	Aucun
+      
+      // Return value:
+      procedure InitializeControl()
+      
+      DeleteAll(garrDot)
+      DeleteAll(gaaPattern)
+      DeleteAll(garrPatternOrder)
+      
+      nHMargin is int = CoordinateEditorToScreen(15)
+      nMarginV is int = CoordinateEditorToScreen(15)
+      
+      nInsMarginH is int = (IMG_PROTECTION.Width - (2*nHMargin)) * 0.05
+      nInsMarginV is int = (IMG_PROTECTION.Height - (2*nMarginV)) * 0.05
+      
+      // Size of a point according to the effective size of control (once the anchors have been applied)
+      gnPointWidth = (IMG_PROTECTION.Width - (2*nHMargin)) * 0.3
+      gnPointHeight = (IMG_PROTECTION.Height - (2*nMarginV)) * 0.3
+      if gnPointWidth>gnPointHeight then
+      	gnPointWidth = gnPointHeight
+      else
+      	gnPointHeight = gnPointWidth
+      end
+      
+      // Calculate the rectangle of each "cell"
+      for nRow=1 _to_ 3
+      	for nCol=1 _to_ 3
+      		r is STRect
+      		r.x1 = ((nCol-1) * (gnPointWidth+nInsMarginH)) + nHMargin
+      		r.y1 = ((nRow-1) * (gnPointHeight+nInsMarginV)) + nMarginV
+      		r.x2 = r.x1 + gnPointWidth
+      		r.y2 = r.y1 + gnPointHeight
+      		
+      		Add(garrDot,r)
+      	end
+      end
+      
+      // Empty matrix drawing
+      dStartDrawing(IMG_PROTECTION,dErase)
+      dChangeMode(drawAntiAliasing)
+      
+      for n=1 to 9
+      	iSrc is Image = IMG_BASE	// An image type must be used otherwise dCopy ignores the transparency color
+      	dCopy(iSrc,IMG_PROTECTION,0,0,IMG_BASE.Width,IMG_BASE.Height,garrDot[n].x1,garrDot[n].y1,gnPointWidth,gnPointHeight)
+      end
+      
+      gnDrawingInProgress = 0
+     type : 458752
+   -
+     name : PatternToString
+     procedure_id : 1315896366676982728
+     type_code : 14
+     code : |1-
+      // Summary: <specify the action of the procedure>
+      // Syntaxe :
+      //[ <Résultat> = ] PatternToString ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Example:
+      // Indicate an example.
+      //
+      // Return value:
+      // 	UNICODE string: // 	None
+      procedure PatternToString()
+      
+      sString is string
+      
+      for each nIndex, nElem of gaaPattern
+      	sString += [","]+nElem
+      end
+      
+      return sString
+     type : 458752
+   -
+     name : ProcessRollover
+     procedure_id : 1315896366677048264
+     type_code : 14
+     code : |1-
+      // Summary: <specify the action of the procedure>
+      // Syntaxe :
+      //ProcessRollover ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Example:
+      // Indicate an example.
+      //
+      // Return value:
+      procedure ProcessRollover()
+      
+      // We cannot exceed nine elements in the pattern
+      if gaaPattern.Count=9 then
+      	return
+      end
+      
+      // Seek the hovered element
+      nX is int = MouseXPos() 
+      nY is int = MouseYPos() 
+      iSrc is Image = IMG_ROLLOVER
+      
+      for n=1 _to_ 9
+      	r is STRect = garrDot[n]
+      	if (r.x1<nX<r.x2) _and_ (r.y1<nY<r.y2) then
+      		nNbElem is int
+      		
+      		if gaaPattern[n]=0 then
+      			// Adds the hovered element into the pattern table
+      			gaaPattern[n] = (gaaPattern.Count+1)
+      			Add(garrPatternOrder,n)
+      			nNbElem = garrPatternOrder.Count
+      			if nNbElem>1 then
+      				r2 is STRect = garrDot[garrPatternOrder[nNbElem-1]]
+      				
+      				nX1 is int = r.x1 + (r.x2 - r.x1)/2
+      				nY1 is int = r.y1 + (r.y2 - r.y1)/2
+      				
+      				nX2 is int  = r2.x1 + (r2.x2 - r2.x1)/2
+      				nY2 is int = r2.y1 + (r2.y2 - r2.y1)/2
+      				
+      				// Draw the line
+      				dLine(nX1,nY1,nX2,nY2, RGB(255,255,255), 10)
+      //				dCopy(iSrc,IMG_PROTECTION,0,0,IMG_BASE..Width,IMG_BASE..Height,r2.x1,r2.y1,gnPointWidth, gnPointHeight)
+      			end
+      			dCopy(iSrc,IMG_PROTECTION,0,0,IMG_BASE.Width,IMG_BASE.Height,r.x1,r.y1,gnPointWidth, gnPointHeight)
+      		end
+      		// Exit as soon as a point matches
+      		return
+      	end	
+      end
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : MDLC_SansNom1
+resources :
+ string_res :
+  identifier : 0x1fd10d820098c776
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

@@ -1,0 +1,179 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : SET_SECURESTRING_ANDROID
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x124300c308702f35
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     code : |1-
+      
+      if InSimulatorMode() = False then
+      	JAVA__Init()	
+      end
+     type : 720896
+  procedures :
+   -
+     name : JAVA__Init
+     procedure_id : 1315896353782574901
+     type_code : 15
+     group : 5
+     code : |1-
+      import android.security.keystore.KeyGenParameterSpec;
+      import android.security.keystore.KeyProperties;
+      import android.util.Base64;
+      
+      import java.io.IOException;
+      import java.nio.charset.StandardCharsets;
+      import java.security.InvalidAlgorithmParameterException;
+      import java.security.InvalidKeyException;
+      import java.security.KeyStore;
+      import java.security.KeyStoreException;
+      import java.security.NoSuchAlgorithmException;
+      import java.security.NoSuchProviderException;
+      import java.security.UnrecoverableEntryException;
+      import java.security.cert.CertificateException;
+      
+      import javax.crypto.BadPaddingException;
+      import javax.crypto.Cipher;
+      import javax.crypto.IllegalBlockSizeException;
+      import javax.crypto.KeyGenerator;
+      import javax.crypto.NoSuchPaddingException;
+      import javax.crypto.SecretKey;
+      import javax.crypto.spec.IvParameterSpec;
+      
+      private static void JAVA__Init() 
+      {
+      	try {
+      		keyStore = JAVA__LoadKeyStore();
+      		
+      	} catch( KeyStoreException | CertificateException | NoSuchAlgorithmException | IOException e ) {
+      	 	e.printStackTrace();	 	
+      	}
+      }
+      
+      private static final String TRANSFORMATION = KeyProperties.KEY_ALGORITHM_AES + "/" + KeyProperties.BLOCK_MODE_CBC + "/" + KeyProperties.ENCRYPTION_PADDING_PKCS7;
+      private static final String ANDROID_KEY_STORE = "AndroidKeyStore";
+      private static final String SEPARATOR = ",";
+      private static KeyStore keyStore = null;
+      
+      private static KeyStore JAVA__LoadKeyStore() throws KeyStoreException, CertificateException, NoSuchAlgorithmException, IOException
+      {
+      	keyStore = KeyStore.getInstance( ANDROID_KEY_STORE );
+      	
+      	keyStore.load(null);
+      	
+      	return keyStore;
+      }
+      
+      private static SecretKey JAVA__GetKey( String sAlias ) throws NoSuchProviderException, NoSuchAlgorithmException, InvalidAlgorithmParameterException
+      { 
+      	SecretKey secretKey = null;
+      
+      	try {
+      
+      		final KeyStore.SecretKeyEntry secretKeyEntry = ( KeyStore.SecretKeyEntry ) keyStore.getEntry( sAlias, null );
+      		
+      		if (secretKeyEntry != null) secretKey = secretKeyEntry.getSecretKey();
+      		
+      	} catch (KeyStoreException | NoSuchAlgorithmException | UnrecoverableEntryException e) {		
+      		e.printStackTrace();
+      	}
+      	
+      	if ( secretKey == null ) {
+      		
+      		final KeyGenerator keyGenerator = KeyGenerator.getInstance( KeyProperties.KEY_ALGORITHM_AES, ANDROID_KEY_STORE );
+      		
+      		final KeyGenParameterSpec keyGenParameterSpec =	new KeyGenParameterSpec.Builder(
+      															sAlias,
+      															KeyProperties.PURPOSE_ENCRYPT | KeyProperties.PURPOSE_DECRYPT
+      														).setBlockModes( KeyProperties.BLOCK_MODE_CBC )
+      														 .setEncryptionPaddings( KeyProperties.ENCRYPTION_PADDING_PKCS7 )
+      														 .build();
+      		
+      		keyGenerator.init( keyGenParameterSpec );
+      		
+      		secretKey = keyGenerator.generateKey();		
+      	}
+      	
+      	return secretKey;
+      }
+     language : Java
+     type : 458752
+   -
+     name : JAVA__SaveEncryptedString
+     procedure_id : 1315896353782640437
+     type_code : 15
+     group : 5
+     code : |1-
+      public static String JAVA__SaveEncryptedString( String sAlias, String sData )
+      {
+      	try {
+      		
+      		SecretKey secretKey = JAVA__GetKey( sAlias );
+      		
+      		final Cipher cipher = Cipher.getInstance( TRANSFORMATION );
+      		cipher.init( Cipher.ENCRYPT_MODE, secretKey );
+      		
+      		String iv = Base64.encodeToString( cipher.getIV(), Base64.DEFAULT );
+      		String encrypted = Base64.encodeToString( cipher.doFinal( sData.getBytes( StandardCharsets.UTF_8 ) ), Base64.DEFAULT );
+      		
+      		return encrypted + SEPARATOR + iv;	
+      	
+      	} catch( Exception e ) {		
+      		e.printStackTrace();
+      		return "";
+      	}
+      }
+     language : Java
+     type : 458752
+   -
+     name : JAVA__LoadDecryptedString
+     procedure_id : 1315896353782705973
+     type_code : 15
+     group : 5
+     code : |1-
+      public static String JAVA__LoadDecryptedString( String sAlias, String sCryptedData )
+      {
+      	try {
+      
+      		SecretKey secretKey = JAVA__GetKey( sAlias );
+      		
+      		String[] parts = sCryptedData.split( SEPARATOR );
+      		if (parts.length != 2) return "";
+      			
+      		byte[] encrypted = Base64.decode( parts[ 0 ], Base64.DEFAULT ),
+      					  iv = Base64.decode( parts[ 1 ], Base64.DEFAULT );
+      		
+      		final Cipher cipher = Cipher.getInstance( TRANSFORMATION );
+      		IvParameterSpec spec = new IvParameterSpec( iv );
+      		cipher.init( Cipher.DECRYPT_MODE, secretKey, spec );
+      		
+      		return new String( cipher.doFinal( encrypted ), StandardCharsets.UTF_8 );
+      	
+      	} catch( Exception e ) {		
+      		e.printStackTrace();
+      		return "";
+      	}	
+      }
+     language : Java
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x1127505600c85cd4
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
